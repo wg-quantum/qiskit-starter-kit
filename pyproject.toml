@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "qiskit-starter-kit"
+version = "0.1.0"
+description = ""
+authors = ["mi2valley <monocoin189@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+qiskit = {extras = ["visualization"], version = "^1.1.0"}
+jupyter = "^1.0.0"
+qiskit-ibm-runtime = "^0.23.0"
+python-dotenv = "^1.0.1"
+qiskit-ibm-provider = "^0.11.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
