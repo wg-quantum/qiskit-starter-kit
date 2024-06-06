@@ -726,6 +726,22 @@ files = [
 ]
 
 [[package]]
+name = "graphviz"
+version = "0.20.3"
+description = "Simple Python interface for Graphviz"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "graphviz-0.20.3-py3-none-any.whl", hash = "sha256:81f848f2904515d8cd359cc611faba817598d2feaac4027b266aa3eda7b3dde5"},
+    {file = "graphviz-0.20.3.zip", hash = "sha256:09d6bc81e6a9fa392e7ba52135a9d49f1ed62526f96499325930e87ca1b5925d"},
+]
+
+[package.extras]
+dev = ["flake8", "pep8-naming", "tox (>=3)", "twine", "wheel"]
+docs = ["sphinx (>=5,<7)", "sphinx-autodoc-typehints", "sphinx-rtd-theme"]
+test = ["coverage", "pytest (>=7,<8.1)", "pytest-cov", "pytest-mock (>=3)"]
+
+[[package]]
 name = "h11"
 version = "0.14.0"
 description = "A pure-Python, bring-your-own-I/O implementation of HTTP/1.1"
@@ -820,6 +836,27 @@ files = [
     {file = "idna-3.7-py3-none-any.whl", hash = "sha256:82fee1fc78add43492d3a1898bfa6d8a904cc97d8427f683ed8e798d07761aa0"},
     {file = "idna-3.7.tar.gz", hash = "sha256:028ff3aadf0609c1fd278d8ea3089299412a7a8b9bd005dd08b9f8285bcb5cfc"},
 ]
+
+[[package]]
+name = "ipycytoscape"
+version = "1.3.3"
+description = "A Cytoscape widget for Jupyter"
+optional = false
+python-versions = "*"
+files = [
+    {file = "ipycytoscape-1.3.3-py2.py3-none-any.whl", hash = "sha256:4bc205724971f5f7a3fc2b09dfec20c357c4c6dfa2b4bd41e7c33c995c3f6906"},
+    {file = "ipycytoscape-1.3.3.tar.gz", hash = "sha256:b6f3199df034f088e92d388e27e629f58ae2901b213cb9299e5b564272f9a2f8"},
+]
+
+[package.dependencies]
+ipywidgets = ">=7.6.0"
+spectate = ">=1.0.0"
+
+[package.extras]
+docs = ["jupyter-sphinx (>=0.3.1)", "nbsphinx", "nbsphinx-link", "networkx", "pandas", "sphinx", "sphinx-autobuild (>=2020.9.1)", "sphinx-copybutton", "sphinx-rtd-theme"]
+examples = ["monotonic", "pandas", "py2neo"]
+neo4j = ["monotonic", "py2neo"]
+test = ["nbclassic (>=0.2.8)", "nbval", "networkx", "pandas", "pre-commit", "pytest (>4.6)", "pytest-cov"]
 
 [[package]]
 name = "ipykernel"
@@ -971,6 +1008,21 @@ files = [
     {file = "json5-0.9.25-py3-none-any.whl", hash = "sha256:34ed7d834b1341a86987ed52f3f76cd8ee184394906b6e22a1e0deb9ab294e8f"},
     {file = "json5-0.9.25.tar.gz", hash = "sha256:548e41b9be043f9426776f05df8635a00fe06104ea51ed24b67f908856e151ae"},
 ]
+
+[[package]]
+name = "jsonpickle"
+version = "3.0.3"
+description = "Python library for serializing any arbitrary object graph into JSON"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "jsonpickle-3.0.3-py3-none-any.whl", hash = "sha256:e8d6dcc58f6722bea0321cd328fbda81c582461185688a535df02be0f699afb4"},
+    {file = "jsonpickle-3.0.3.tar.gz", hash = "sha256:5691f44495327858ab3a95b9c440a79b41e35421be1a6e09a47b6c9b9421fd06"},
+]
+
+[package.extras]
+docs = ["furo", "jaraco.packaging (>=9)", "rst.linker (>=1.9)", "sphinx"]
+testing = ["ecdsa", "feedparser", "gmpy2", "numpy", "pandas", "pymongo", "pytest (>=3.5,!=3.7.3)", "pytest-checkdocs (>=1.2.3)", "pytest-cov", "pytest-enabler (>=1.0.1)", "pytest-ruff", "scikit-learn", "simplejson", "sqlalchemy", "ujson"]
 
 [[package]]
 name = "jsonpointer"
@@ -1653,6 +1705,24 @@ files = [
 ]
 
 [[package]]
+name = "networkx"
+version = "3.2.1"
+description = "Python package for creating and manipulating graphs and networks"
+optional = false
+python-versions = ">=3.9"
+files = [
+    {file = "networkx-3.2.1-py3-none-any.whl", hash = "sha256:f18c69adc97877c42332c170849c96cefa91881c99a7cb3e95b7c659ebdc1ec2"},
+    {file = "networkx-3.2.1.tar.gz", hash = "sha256:9f1bb5cf3409bf324e0a722c20bdb4c20ee39bf1c30ce8ae499c8502b0b5e0c6"},
+]
+
+[package.extras]
+default = ["matplotlib (>=3.5)", "numpy (>=1.22)", "pandas (>=1.4)", "scipy (>=1.9,!=1.11.0,!=1.11.1)"]
+developer = ["changelist (==0.4)", "mypy (>=1.1)", "pre-commit (>=3.2)", "rtoml"]
+doc = ["nb2plots (>=0.7)", "nbconvert (<7.9)", "numpydoc (>=1.6)", "pillow (>=9.4)", "pydata-sphinx-theme (>=0.14)", "sphinx (>=7)", "sphinx-gallery (>=0.14)", "texext (>=0.6.7)"]
+extra = ["lxml (>=4.6)", "pydot (>=1.4.2)", "pygraphviz (>=1.11)", "sympy (>=1.10)"]
+test = ["pytest (>=7.2)", "pytest-cov (>=4.0)"]
+
+[[package]]
 name = "notebook"
 version = "7.2.0"
 description = "Jupyter Notebook - A web-based notebook environment for interactive computing"
@@ -1982,6 +2052,21 @@ test = ["appdirs (==1.4.4)", "covdefaults (>=2.3)", "pytest (>=7.4.3)", "pytest-
 type = ["mypy (>=1.8)"]
 
 [[package]]
+name = "plotly"
+version = "5.22.0"
+description = "An open-source, interactive data visualization library for Python"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "plotly-5.22.0-py3-none-any.whl", hash = "sha256:68fc1901f098daeb233cc3dd44ec9dc31fb3ca4f4e53189344199c43496ed006"},
+    {file = "plotly-5.22.0.tar.gz", hash = "sha256:859fdadbd86b5770ae2466e542b761b247d1c6b49daed765b95bb8c7063e7469"},
+]
+
+[package.dependencies]
+packaging = "*"
+tenacity = ">=6.2.0"
+
+[[package]]
 name = "prometheus-client"
 version = "0.20.0"
 description = "Python client for the Prometheus monitoring system."
@@ -2008,6 +2093,27 @@ files = [
 
 [package.dependencies]
 wcwidth = "*"
+
+[[package]]
+name = "prototype-zne"
+version = "1.3.1"
+description = "Zero Noise Extrapolation (ZNE) prototype for error mitigation on"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "prototype_zne-1.3.1-py3-none-any.whl", hash = "sha256:c2fe9835146a1af17e7470f707208b35b712e32f021c353cdf1b25961703ccca"},
+    {file = "prototype_zne-1.3.1.tar.gz", hash = "sha256:646bb77bd795c431e3e1a5b4f440c3d18e8143bdc1d4ee2136c552be32fde4c1"},
+]
+
+[package.dependencies]
+qiskit = ">=0.45.1"
+
+[package.extras]
+dev = ["commitizen (>=2.28.0)", "pre-commit (>=2.19.0)", "tox (>=4.4.6)"]
+docs = ["jupyter-sphinx (>=0.3.2)", "nbsphinx (>=0.8.8)", "reno (>=3.5.0)", "sphinx-autodoc-typehints (>=1.17.0)"]
+lint = ["autoflake (>=1.7.6)", "black[jupyter] (>=22.6.0,<22.7.0)", "flake8 (>=4.0.1)", "isort (>=5.10.1)", "mypy (>=0.961)", "mypy-extensions (>=0.4.3)", "pylint (>=2.14.4)"]
+notebook = ["jupyter (>=1.0.0)", "nbqa (>=1.3.1)", "notebook (>=6.4.12)", "qiskit-aer (>=0.13.1)", "qiskit[visualization] (>=0.45.1)", "treon (>=0.1.3)"]
+test = ["pytest (>=7.1.2)", "pytest-cov (>=3.0.0)", "pytest-randomly (>=3.12.0)", "qiskit-aer (>=0.13.1)"]
 
 [[package]]
 name = "psutil"
@@ -2525,6 +2631,32 @@ files = [
 cffi = {version = "*", markers = "implementation_name == \"pypy\""}
 
 [[package]]
+name = "qc_grader"
+version = "0.18.8"
+description = "Grading client for the IBM Quantum Challenge"
+optional = false
+python-versions = ">=3.8"
+files = []
+develop = false
+
+[package.dependencies]
+ipycytoscape = "*"
+jsonpickle = "3.0.3"
+networkx = "3.2.1"
+plotly = "*"
+typeguard = "*"
+
+[package.extras]
+jupyter = ["ipykernel", "jupyterlab"]
+qiskit = ["qiskit-aer (>=0.14.1,<0.15.0)", "qiskit-ibm-runtime (>=0.23.0,<0.24.0)", "qiskit[visualization] (==1.0.2)"]
+
+[package.source]
+type = "git"
+url = "https://github.com/qiskit-community/Quantum-Challenge-Grader.git"
+reference = "HEAD"
+resolved_reference = "87d951509bdb78ecd3ec2c6f93b548590b3b2d17"
+
+[[package]]
 name = "qiskit"
 version = "1.1.0"
 description = "An open-source SDK for working with quantum computers at the level of extended quantum circuits, operators, and primitives."
@@ -2566,6 +2698,60 @@ crosstalk-pass = ["z3-solver (>=4.7)"]
 csp-layout-pass = ["python-constraint (>=1.4)"]
 qasm3-import = ["qiskit-qasm3-import (>=0.1.0)"]
 visualization = ["Pillow (>=4.2.1)", "matplotlib (>=3.3)", "pydot", "pylatexenc (>=1.4)", "seaborn (>=0.9.0)"]
+
+[[package]]
+name = "qiskit-aer"
+version = "0.14.2"
+description = "Aer - High performance simulators for Qiskit"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "qiskit-aer-0.14.2.tar.gz", hash = "sha256:9918916dc25071f4e2ddbe5f5c6114de18738cdb05bc12dc97823a556b3df9c2"},
+    {file = "qiskit_aer-0.14.2-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:6b9385add7fbc0ae790583657c0dc0b564ec95d3285c22fa7d7332a8452f31c5"},
+    {file = "qiskit_aer-0.14.2-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:7e63523705d27d527d048da9b70bdf398faf728867aa728099f753ea2bea13cd"},
+    {file = "qiskit_aer-0.14.2-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:c51e85ce3a55d6527f74e1133b045ef7ca23bb11519639ca321249a89fe755b6"},
+    {file = "qiskit_aer-0.14.2-cp310-cp310-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:3691dd8e3afa749822474de355fe813559fb78ab0c7c5ac08f060b8f82bfaeb9"},
+    {file = "qiskit_aer-0.14.2-cp310-cp310-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:8b4490ce94d740d6f833776be37b31bf7bb94dc38e8789ab2c27421449cabad2"},
+    {file = "qiskit_aer-0.14.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:7f5f42e6f016bb027079fef73597a3b35b76e2ac398138d83651833e93dc964d"},
+    {file = "qiskit_aer-0.14.2-cp310-cp310-win32.whl", hash = "sha256:0bfa5c289f973f081a0874bf79a1087c9d70a052c16f8bbc8ab2ff3e796859c4"},
+    {file = "qiskit_aer-0.14.2-cp310-cp310-win_amd64.whl", hash = "sha256:9398730784ded8cdd046596683de7e5fd540f5173c9a3a4e4ccf72d79e47ff58"},
+    {file = "qiskit_aer-0.14.2-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:b3ec6c470b0ba493703ebc514c1eff2c1cbc204b0795de2f5f2a3bc497edd423"},
+    {file = "qiskit_aer-0.14.2-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:8dbb6a0ec4ae193cb3649f4400178592ea4ad9714b070bf86222d370bfcb9e15"},
+    {file = "qiskit_aer-0.14.2-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:8c11a3fd727d3075fb4d4ad00cf6670fa944d2df7f4b1b5b109f45bd9156d603"},
+    {file = "qiskit_aer-0.14.2-cp311-cp311-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:246175da975a80e3999c8b1a375dc7248f59b165b8fcabc3be4dde8d07224ffe"},
+    {file = "qiskit_aer-0.14.2-cp311-cp311-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:b7d1526359547c006a7c9ce35441c2a2207ceeb78fc05ac29866d700cf4da175"},
+    {file = "qiskit_aer-0.14.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:05e3bd6a6bc68a8705f3f37e0597c5de91b2ce051b72743028f4a306c3483bd0"},
+    {file = "qiskit_aer-0.14.2-cp311-cp311-win32.whl", hash = "sha256:7f2320ea40f0118059acb2345aed03039a453693adc47f8adec079e1d163e3c6"},
+    {file = "qiskit_aer-0.14.2-cp311-cp311-win_amd64.whl", hash = "sha256:7b5e91625563a16e2e237d1e0b79996937045c15cd086d2ea265e7b952bea9de"},
+    {file = "qiskit_aer-0.14.2-cp312-cp312-macosx_10_9_x86_64.whl", hash = "sha256:215bc8ad213b8541cbe85b423bfd4ca7464294678a76e65820329f3b92a33478"},
+    {file = "qiskit_aer-0.14.2-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:4302a11317a46490b06c91d8b70fd1d5895692904a0624c7974d669454ef0876"},
+    {file = "qiskit_aer-0.14.2-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:1e26e59e021376445a0f1673f9da816273d3987fd2270634bcfa6e3c9281b127"},
+    {file = "qiskit_aer-0.14.2-cp312-cp312-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:57d3df63142b17e753f6fbe8ab01038ae45057ba6d897e53f94e78c80960e4f2"},
+    {file = "qiskit_aer-0.14.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:e734d3afa26919a511085d474b6cfc1fcc44e4c692227e65cd8e09be521a0881"},
+    {file = "qiskit_aer-0.14.2-cp312-cp312-win32.whl", hash = "sha256:329e3b8c8ccf6cdfb251ef6cc99249ca424a4193a1b2c6df54d7b66bcdac9566"},
+    {file = "qiskit_aer-0.14.2-cp312-cp312-win_amd64.whl", hash = "sha256:4085fdc0a805eddbda12fbcdfde0c69e724c56b50168655778388a95b73c9c12"},
+    {file = "qiskit_aer-0.14.2-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:cddf30ee84eb5923c7a9d68074f2ce388790cab10346ad76876d91c6d0a4873c"},
+    {file = "qiskit_aer-0.14.2-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:451699ca80b3fef59a7bebac245b3988740dd6095c1fa2959bc474b1fac51187"},
+    {file = "qiskit_aer-0.14.2-cp38-cp38-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:d1ba57424a4649288c3c63685b3a2deaf9447e55e4f04d54af623ef981a4853f"},
+    {file = "qiskit_aer-0.14.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:16ef5ea5fb05c8d66a6911934e3640b0d56ad4842bca41ebf3328387d079c4bd"},
+    {file = "qiskit_aer-0.14.2-cp38-cp38-win32.whl", hash = "sha256:c412d866ef50d2813fbefcc093bcb507fcdc1d97d652ea9407e86d13fb25e5df"},
+    {file = "qiskit_aer-0.14.2-cp38-cp38-win_amd64.whl", hash = "sha256:7c3cca5a15bd11cc0ff3562a7e39cc99c9069159c609c9633766e0be4ad7789c"},
+    {file = "qiskit_aer-0.14.2-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:0aff9888269095fe1fdb4b8a870cf66a9a63c00eaf0296e955e122d8b61e2f3f"},
+    {file = "qiskit_aer-0.14.2-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:05c826eba94952f0c43e52baefea0801e4eccf9a4886aca484fcfa1381dd5bf3"},
+    {file = "qiskit_aer-0.14.2-cp39-cp39-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:05d19db49fdecd4f71f3a35525c9fcdc32c80e90e502f872536af1e0ffa1f618"},
+    {file = "qiskit_aer-0.14.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:73a48105df9e1df9284b64ba983cdb6b23eae41090db8c80ff956e78ad91bdac"},
+    {file = "qiskit_aer-0.14.2-cp39-cp39-win32.whl", hash = "sha256:8d2fffd42974ed0d2b1c89323c5405aa6cad71316c8e3994aad341e9fb3b3c92"},
+    {file = "qiskit_aer-0.14.2-cp39-cp39-win_amd64.whl", hash = "sha256:30ffebbd00860691e7e8802b9aaef2640e691680c3ac2a5b9a454e3b9d336eee"},
+]
+
+[package.dependencies]
+numpy = ">=1.16.3"
+psutil = ">=5"
+qiskit = ">=0.45.2"
+scipy = ">=1.0"
+
+[package.extras]
+dask = ["dask", "distributed"]
 
 [[package]]
 name = "qiskit-ibm-provider"
@@ -3032,6 +3218,17 @@ files = [
 ]
 
 [[package]]
+name = "spectate"
+version = "1.0.1"
+description = "Track changes to mutable data types."
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "spectate-1.0.1-py2.py3-none-any.whl", hash = "sha256:c4585194c238979f953fbf2ecf9f94c84d9d0a929432c7104e39984f52c9e718"},
+    {file = "spectate-1.0.1.tar.gz", hash = "sha256:49a2dde0962fcecf120cb361cc293989489078eb29ba1d8c3d342a741e898b7e"},
+]
+
+[[package]]
 name = "sspilib"
 version = "0.1.0"
 description = "SSPI API bindings for Python"
@@ -3162,6 +3359,21 @@ files = [
 mpmath = ">=1.1.0,<1.4.0"
 
 [[package]]
+name = "tenacity"
+version = "8.3.0"
+description = "Retry code until it succeeds"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "tenacity-8.3.0-py3-none-any.whl", hash = "sha256:3649f6443dbc0d9b01b9d8020a9c4ec7a1ff5f6f3c6c8a036ef371f573fe9185"},
+    {file = "tenacity-8.3.0.tar.gz", hash = "sha256:953d4e6ad24357bceffbc9707bc74349aca9d245f68eb65419cf0c249a1949a2"},
+]
+
+[package.extras]
+doc = ["reno", "sphinx"]
+test = ["pytest", "tornado (>=4.5)", "typeguard"]
+
+[[package]]
 name = "terminado"
 version = "0.18.1"
 description = "Tornado websocket backend for the Xterm.js Javascript terminal emulator library."
@@ -3234,6 +3446,24 @@ files = [
 [package.extras]
 docs = ["myst-parser", "pydata-sphinx-theme", "sphinx"]
 test = ["argcomplete (>=3.0.3)", "mypy (>=1.7.0)", "pre-commit", "pytest (>=7.0,<8.2)", "pytest-mock", "pytest-mypy-testing"]
+
+[[package]]
+name = "typeguard"
+version = "4.3.0"
+description = "Run-time type checker for Python"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "typeguard-4.3.0-py3-none-any.whl", hash = "sha256:4d24c5b39a117f8a895b9da7a9b3114f04eb63bade45a4492de49b175b6f7dfa"},
+    {file = "typeguard-4.3.0.tar.gz", hash = "sha256:92ee6a0aec9135181eae6067ebd617fd9de8d75d714fb548728a4933b1dea651"},
+]
+
+[package.dependencies]
+typing-extensions = ">=4.10.0"
+
+[package.extras]
+doc = ["Sphinx (>=7)", "packaging", "sphinx-autodoc-typehints (>=1.2.0)", "sphinx-rtd-theme (>=1.3.0)"]
+test = ["coverage[toml] (>=7)", "mypy (>=1.2.0)", "pytest (>=7)"]
 
 [[package]]
 name = "types-python-dateutil"
@@ -3447,4 +3677,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "9751aec1671fb1a37f3dc603bdb8cd1cb73490af3caa26758135a59efd6762a6"
+content-hash = "f51ac687090c7aa392613cf288a796da43dc5cbf48a3278aed8c184233385436"
