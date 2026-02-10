@@ -7,11 +7,10 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
-qiskit = {extras = ["visualization"], version = "^1.1.0"}
-jupyter = "^1.0.0"
-qiskit-ibm-runtime = "^0.23.0"
-python-dotenv = "^1.0.1"
-qiskit-ibm-provider = "^0.11.0"
+qiskit = {extras = ["visualization"], version = "^2.3.0"}
+jupyter = "^1.1.1"
+qiskit-ibm-runtime = "^0.45.0"
+python-dotenv = "^1.2.1"
 
 
 [build-system]
